@@ -1,0 +1,24 @@
+Use JSTL:
+1.copy jstl.jar,standard.jar to WEB-INF/lib
+2.copy tld to WEB-INF
+
+use in jsp file:
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
+if runinto exception,try to add context below to web.xml
+<taglib>
+    <taglib-uri>http://java.sun.com/jstl/core</taglib-uri>
+    <taglib-location>/WEB-INF/tlds/c.tld</taglib-location>
+</taglib>
+
+dev tab by yourself:
+http://blog.csdn.net/a1304317638/article/details/8194519
+extends TagSupport,
+doStartTag(),doEndTag()
+doStartTag()方法是遇到标签开始时会呼叫的方法，
+其合法的返回值是EVAL_BODY_INCLUDE与SKIP_BODY,
+前者表示将显示标签间的文字，后者表示不显示标签间的文字；
+doEndTag()方法是在遇到标签结束时呼叫的方法，
+其合法的返回值是EVAL_PAGE与SKIP_PAGE，
+前者表示处理完标签后继续执行以下的JSP网页，
+后者是表示不处理接下来的JSP网页
