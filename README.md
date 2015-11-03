@@ -6,7 +6,7 @@
     2.重写doStartTag(),doEndTag()方法
     3.配置.tld文件(/WEB-INF/tld/)
 ## 版本库地址
-* HTTP协议: `https://github.com/ichunming/myTagProject.git`
+* HTTPS协议: `https://github.com/ichunming/myTagProject.git`
 * SSH协议: `git@github.com:ichunming/myTagProject.git`
 
 ## 克隆版本库
